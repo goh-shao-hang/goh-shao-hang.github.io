@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Goh Shao Hang | Game Designer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="above-fold">
+      <header>
+        <a href="#"
+          ><img
+            class="logo"
+            src="images/GamecellsBannerAnimatedTrimmed.gif"
+            alt="Banner Image of Gamecells"
+          />
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+        <nav>
+          <a href="#">Home</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+      <div class="hero">
+        <video
+          class="hero-video"
+          poster="images/hero-poster.png"
+          autoplay
+          muted
+          loop
+          playsinline
+          disablePictureInPicture
+        >
+          <source src="videos/hero-video.webm" type="video/webm" />
+          <source src="videos/hero-video.mp4" type="video/mp4" />
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+          <h1>Goh Shao Hang</h1>
+          <p>Game Designer | Combat & Narrative Design</p>
+          <a href="#about">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section id="about">
+        <h2>About Me</h2>
+        <div>
+          <p class="about">Hi, I am <em>Goh Shao Hang</em>.</p>
+          <p class="about">
+            I am a game designer with experience in Unity, Unreal and Godot,
+            with a love for combat and narrative design.
+          </p>
+          <p class="about">I also do art and storytelling!</p>
+        </div>
+      </section>
+      <section>
+        <h2>Showreel</h2>
+        <iframe
+          src="https://www.youtube.com/embed/Xxw1NPWMXco?si=EouvXhj8TsORYzJm"
+          title="Showreel"
+          frameborder="0"
+          allow="
+            accelerometer;
+            autoplay;
+            clipboard-write;
+            encrypted-media;
+            gyroscope;
+            picture-in-picture;
+            web-share;
+          "
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+        <!-- <video src="videos/showreel.mp4" controls playsinline></video> -->
+      </section>
+      <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-grid">
+          <div class="project-card">
+            <img
+              class="thumbnail"
+              src="images/amidst-blooming-melodies-thumb.jpg"
+              alt="Thumbnail of Amidst Blooming Melodies"
+              loading="lazy"
+            />
+            <h3>Amidst Blooming Melodies</h3>
+            <a
+              class="btn-details"
+              href="projects/amidst-blooming-melodies.html"
+            >
+              Details
+            </a>
+          </div>
+          <div class="project-card">
+            <img
+              class="thumbnail"
+              src="images/curse-breaker-awakening-thumb.png"
+              alt="Thumbnail of Curse Breaker: Awakening"
+              loading="lazy"
+            />
+            <h3>Curse Breaker: Awakening</h3>
+            <a class="btn-details" href="projects/curse-breaker-awakening.html">
+              Details
+            </a>
+          </div>
+          <div class="project-card">
+            <img
+              class="thumbnail"
+              src="images/devourer-thumb.png"
+              alt="Thumbnail of Devourer"
+              loading="lazy"
+            />
+            <h3>Devourer</h3>
+            <a class="btn-details" href="projects/devourer.html"> Details </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer id="contact">
+      <h2>Contact</h2>
+      <p>
+        Email: <a href="mailto:seanmaxgoh@gmail.com">seanmaxgoh@gmail.com</a>
+      </p>
+      <p>
+        LinkedIn:
+        <a href="https://www.linkedin.com/in/goh-shao-hang" target="_blank"
+          >linkedin.com/in/goh-shao-hang</a
+        >
+      </p>
+      <p id="copyright">
+        &copy; Made with HTML, CSS and JavaScript by Goh Shao Hang. All rights
+        reserved.
+      </p>
+    </footer>
+
+    <script src="scripts/hamburger.js"></script>
+    <script>
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      );
+      const heroVideo = document.querySelector(".hero-video");
+      if (reduceMotion.matches) {
+        heroVideo.pause();
+        heroVideo.removeAttribute("autoplay");
+      }
+    </script>
+  </body>
+</html>
