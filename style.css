@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root{
     --gold: #e8b84b;
     --bg-dark: #14121a;
@@ -38,12 +42,13 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 32px;
+    padding: 0px 32px;
     flex-shrink: 0;
 }
 
 .logo{  
     height: 60px;
+    padding: 4px;
     width: auto;
 }
 
@@ -310,6 +315,7 @@ video{
 
 
 body {
+    margin: 0;
   background-color: #14121a;
   color: #ede9f5;
 
