@@ -67,7 +67,7 @@ header{
 
 .logo{  
     height: 60px;
-    padding: 4px;
+    padding: 6px;
     width: auto;
     display: block;
 }
@@ -136,6 +136,7 @@ header{
     font-family: "Fraunces", serif;
     font-size: 3.5rem;
     font-weight: 700;
+    letter-spacing: 0.1em;
 }
 
 .hero-text p{
@@ -383,7 +384,7 @@ h2 {
 }
 
 #copyright{
-    color: var(--gold);
+    color: var(--muted);
     font-size: 0.8rem;
     margin-top: 25px;
     font-style: italic;
