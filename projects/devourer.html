@@ -28,7 +28,6 @@
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
-    <p><a href="../index.html#projects"> Back to projects</a></p>
     <header>
       <a href="../index.html">
         <img
@@ -46,17 +45,19 @@
     </header>
 
     <main>
-      <section>
-        <h1>Devourer</h1>
-      </section>
+      <div class="project-header">
+        <div class="breadcrumb">
+          <a href="../index.html#projects">&larr; Back to projects</a>
+        </div>
+        <h1 class="project-title">Devourer</h1>
+      </div>
       <section id="demo-video">
         <h2>Demo Video</h2>
         <iframe
           width="560"
           height="315"
           src="https://www.youtube.com/embed/glAtM3YMDZM?si=YvNiv9fma8kWB7Dh"
-          title="YouTube video player"
-          frameborder="0"
+          title="Devourer Demo Video"
           allow="
             accelerometer;
             autoplay;
@@ -73,7 +74,7 @@
       </section>
       <section id="project-details">
         <h2>Project Details</h2>
-        <p>
+        <p class="project-description">
           A boomer-shooter + bullet heaven (inspired by <em>ULTRAKILL</em> and
           <em>Megabonk</em>) where your weapon grows infinitely. Each level
           unlocks a new stat type for your weapon to grow in.
@@ -110,7 +111,10 @@
       </p>
       <p>
         LinkedIn:
-        <a href="https://www.linkedin.com/in/goh-shao-hang" target="_blank"
+        <a
+          href="https://www.linkedin.com/in/goh-shao-hang"
+          target="_blank"
+          rel="noopener noreferrer"
           >linkedin.com/in/goh-shao-hang</a
         >
       </p>
