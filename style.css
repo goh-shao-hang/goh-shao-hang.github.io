@@ -164,7 +164,7 @@ header{
     gap: 20px;
     background-color: var(--bg-dark);
     padding: 20px;
-    border: 5px solid var(--border-color);
+    border: 2px solid var(--border-color);
     justify-content: center;
 }
 
@@ -201,8 +201,8 @@ header{
     color: #14121a;
     font-weight: bold;
     padding: 4px 18px;
-    border-radius: 20px;
-    align-self:center;
+    margin: 6px;
+    border-radius: 5px;
     transition: transform 0.15s ease, background-color 0.15s ease;
 }
 
@@ -297,6 +297,7 @@ img{
 
 iframe{
     width : 100%;
+    max-width: 800px;
     aspect-ratio: 16/9;
     height: auto;
     border: 0;
