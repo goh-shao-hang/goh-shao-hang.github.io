@@ -254,14 +254,17 @@ header{
     transition: transform 0.15s ease;
 }
 
-
-
 .project-detail-box li:hover, .tag-list li:hover{
     transform: scale(1.05);
 }
 
 .tag-list{
     gap: 6px;
+    border-top: 1px solid var(--border-color);
+    padding-top: 6px;
+    height: 100%;
+    display:flex;
+    align-content: start;
 }
 
 .tag-list li{
