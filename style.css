@@ -189,6 +189,10 @@ header{
     margin: 0px;
 }
 
+.project-card p{
+    color: var(--muted);
+}
+
 .card-description{
     flex-grow: 1;
     margin: 0;
