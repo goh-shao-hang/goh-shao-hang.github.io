@@ -66,8 +66,8 @@ header{
 }
 
 .logo{  
-    height: 60px;
-    padding: 6px;
+    height: 80px;
+    padding: 12px;
     width: auto;
     display: block;
 }
@@ -75,8 +75,8 @@ header{
 .above-fold{
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 60px);
-    height: calc(100dvh - 60px);
+    height: calc(100vh - 80px);
+    height: calc(100dvh - 80px);
     /*
     height: 100vh;
     height: 100dvh; /* mobile-safe override, from before 
@@ -410,6 +410,51 @@ a:hover {
     text-decoration: underline; /*adds underline on hover*/
 }
 
+.about-project{
+    margin: 24px 0px;
+}
+
+.about-project-box, .about-project-box-alternate{
+    display: flex;
+    flex-direction: row;
+    gap: 36px;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    align-items: center;
+}
+
+.about-project-box-alternate{
+    flex-direction: row-reverse;
+}
+
+.about-project-box img, .about-project-box-alternate img{
+    min-width: 0%;
+    flex: 0 0 45%;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-project-box p, .about-project-box-alternate p{
+    flex:1;
+}
+
+.about-project h2{
+    margin-top: 36px;
+    margin-bottom: 12px;
+}
+
+.about-project h3 {
+    text-align: left;
+    margin: 0;
+    margin-top: 6px;
+    margin-inline :6px;
+    margin-bottom: 6px;
+}
+
+
 
 @media (max-width: 800px)
 {
@@ -418,85 +463,93 @@ a:hover {
     }
 
     .tools-and-roles{
-    flex-direction: column;
-  }
+        flex-direction: column;
+    }
 
-  .project-card{
-    width: 100%;
-    max-width: 420px;
-    justify-self: center;
-  }
+    .about-project-box, .about-project-box-alternate{
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .about-project-box img,.about-project-box-alternate img{
+        flex: none;
+        width: 100%;
+    }
+
+    .about-project-box p,.about-project-box-alternate p{
+        margin: 0;
+    }
+
+    .project-card{
+        width: 100%;
+        max-width: 420px;
+        justify-self: center;
+    }
 }
 
 @media (max-width: 500px) {
-main {
-    padding: 0;
-}
+    main {
+        padding: 0;
+    }
 
-.project-header{
-    padding-inline: 16px;
-}
+    .project-header{
+        padding-inline: 16px;
+    }
 
+    section{
+        padding: 32px 16px;
+    }
 
+    header {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px 0px;
+        column-gap: 12px;
+    }
 
-section{
-    padding: 32px 16px;
-}
+    .above-fold{
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 60px);
+        height: calc(100dvh - 60px);
+    }
 
-  header {
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0px 0px;
-    column-gap: 12px;
-  }
+    .logo {
+        height: 60px;
+        padding: 5px;
+        display: block;
+    }
 
-  .above-fold{
-    display: flex;
-    flex-direction: column;
-    height: calc(100vh - 60px);
-    height: calc(100dvh - 60px);
-    /*
-    height: 100vh;
-    height: 100dvh; /* mobile-safe override, from before 
-    */
-}
+    .menu-toggle{
+        display: block;
+    }
 
-  .logo {
-    height: 40px;
-    margin: 10px;
-    display: block;
-  }
+    nav {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+        background-color: var(--bg-dark);
+    }
 
-  .menu-toggle{
-    display: block;
-  }
+    nav.open{
+        max-height: 28.8px;
+    }
 
-  nav {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    background-color: var(--bg-dark);
-  }
+    .hero-text h1{
+        font-size: 2rem;
+    }
 
-  nav.open{
-    max-height: 28.8px;
-  }
+    .hero-text p{
+        font-size: 1.25rem;
+    }
 
-  .hero-text h1{
-    font-size: 2rem;
-}
-
-.hero-text p{
-    font-size: 1.25rem;
-}
-
-.project-grid{
-    padding: 12px;
-}
-
+    .project-grid{
+        padding: 12px;
+    }
 }
