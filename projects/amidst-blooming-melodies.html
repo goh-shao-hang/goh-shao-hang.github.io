@@ -79,12 +79,18 @@
         ></video>-->
       </section>
       <section id="project-details">
-        <h2>Project Details</h2>
+        <h2>Project Overview</h2>
         <p class="project-description">
           An action-adventure game with a unique diegetic health mechanic (the
           <span style="font-weight: bold; font-style: italic">Volume</span>)
           displayed beneath the player character as a circle that purifies and
-          interacts with the game environment.
+          interacts with the game environment. You play as Flos against the
+          Giant Voiceless — a bunny-shaped, single-eyed "Corrupted Collective"
+          boss — focusing on a puzzle-box level design and three-phase boss
+          fight Made as my Master's Project where I ran a between-subjects study
+          with 2 builds to investigate how audiovisual and narrative design
+          enhances combat experience while the underlying mechanics remains
+          identical across both conditions.
         </p>
         <div class="tools-and-roles">
           <div class="project-detail-box">
@@ -104,6 +110,7 @@
             <ul>
               <li>Gameplay Design</li>
               <li>Systems Design</li>
+              <li>Level Design</li>
               <li>Programming</li>
               <li>Music Composition</li>
               <li>Sound Design</li>
@@ -113,21 +120,88 @@
           </div>
         </div>
         <div class="about-project">
-          <h2>Combat Design</h2>
-          <h3>Core Gameplay Loop</h3>
-          <div class="about-project-box-alternate">
+          <h2>Design Breakdown</h2>
+          <h3>Core Mechanic</h3>
+          <div class="about-project-box">
             <img
-              src="../images/amidst-blooming-melodies-thumb.jpg"
+              src="../images/amidst-blooming-melodies/volume-1.png"
               alt="Screenshot"
               loading="lazy"
             />
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam
-              rem aliquam ex inventore animi optio, fugit quos autem laborum
-              doloremque corrupti, deleniti nobis quia ut. Deserunt eveniet
-              libero alias quasi similique perferendis quis accusantium itaque
-              quia quo vel dignissimos fugit repudiandae exercitationem,
-              assumenda voluptatibus nemo eum voluptas illum illo laboriosam?
+              The game features a unique diegetic health mechanic: the
+              <span style="font-weight: bold; font-style: italic">Volume</span>,
+              displayed beneath the player character as a circle. The neat part
+              is that this circle also interacts with the game environment (as a
+              <span style="font-weight: bold; font-style: italic"
+                >purify source</span
+              >)!
+            </p>
+          </div>
+          <h3>Purify, Not kill</h3>
+          <div class="about-project-box-alternate">
+            <img
+              src="../images/amidst-blooming-melodies/volume-2.png"
+              alt="Screenshot"
+              loading="lazy"
+            />
+            <p>
+              The enemies are corrupted, so the player purifies them instead of
+              killing them. <br />Attacking enemies causes the same circle on
+              them to grow. The circle turns green and the creature visually
+              changes when purification completes.<br />
+              <span style="font-style: italic">
+                Several testers described this as a novel and heartwarming
+                experience</span
+              >.
+            </p>
+          </div>
+          <h3>Volume as a Puzzling Tool</h3>
+          <div class="about-project-box">
+            <img
+              src="../images/amidst-blooming-melodies/volume-1.png"
+              alt="Screenshot"
+              loading="lazy"
+            />
+            <p>
+              The Volume also acts as a puzzle tool. It interacts with the
+              environment and reveals hidden objects, so the purification theme
+              extends beyond combat. Several puzzle ideas are tested within the
+              proof of concept prototype.
+            </p>
+          </div>
+          <h3>3-Phase Boss Design</h3>
+          <div class="about-project-box-alternate">
+            <img
+              src="../images/amidst-blooming-melodies/state-machine-3.png"
+              alt="Screenshot"
+              loading="lazy"
+            />
+            <p>
+              Phase 1: introduces the boss's actions at low difficulty: an
+              easy-to-dodge exploding projectile toss, punches and stomps.<br />Phase
+              2: adds mobility and positioning pressure: two consecutive rushes,
+              a jumpable shockwave, and a three-projectile toss. <br />Phase 3:
+              escalates with three consecutive rushes and an ultimate: a charged
+              explosion that hits hard up close and scatters exploding
+              projectiles.
+            </p>
+          </div>
+          <h3>Modular In-Editor Game Object Based State Machine</h3>
+          <div class="about-project-box">
+            <img
+              src="../images/amidst-blooming-melodies/state-machine-2.png"
+              alt="Screenshot"
+              loading="lazy"
+            />
+            <p>
+              The Giant Voiceless’s abilities are authored as child game
+              objects, and the state machine is generated from them at spawn. An
+              ability only defines what it does and its conditions, and the
+              system handles entering and exiting its state. Adding or removing
+              an ability object changes the moveset with no code change, and
+              nothing breaks. Once the system existed, the full moveset took
+              under five days, each ability functional in under 30 minutes.
             </p>
           </div>
           <h2>Narrative Design</h2>
@@ -138,19 +212,27 @@
               alt="Screenshot"
               loading="lazy"
             />
-            <p>
-              You play as Flos against the Giant Voiceless — a bunny-shaped,
-              single-eyed "Corrupted Collective" boss — across a three-phase
-              fight with a full transition framework and a sing-to-recover QTE
-              mechanic. The project runs a between-subjects study comparing an
-              audio/narrative-ON build against an OFF build, with mechanical
-              difficulty held constant across both conditions so the comparison
-              isolates framing, not skill.
+            <p class="project-description">
+              You play as Flos, an interstellar traveller who crash-lands on
+              Floralis, a planet she eventually discovers is her home planet.
+              Floralis is plagued by a phenomenon known as the Voiceless. Use
+              the power of your music to purify corrupted enemies, solve
+              environmental puzzles, and restore the voices of a lost world.
             </p>
           </div>
+          <h3>Character Design & Concept Art</h3>
           <img src="../images/amidst-blooming-melodies/flos.jpeg" />
           <img src="../images/amidst-blooming-melodies/violet.jpeg" />
           <img src="../images/amidst-blooming-melodies/voiceless.jpeg" />
+          <p>
+            Art by
+            <a
+              href="https://www.linkedin.com/in/zhong-hao-lai"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Zhong Hao Lai</a
+            >
+          </p>
         </div>
       </section>
     </main>

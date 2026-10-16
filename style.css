@@ -283,8 +283,7 @@ header{
 }
 
 .project-description {
-    text-align: justify;
-    text-justify: inter-word;
+    text-align: left;
 }
 
 .project-detail-box h3 {
