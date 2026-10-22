@@ -11,7 +11,7 @@
 }
 
 html{
-    scroll-padding-top: 60px;
+    scroll-padding-top: 80px;
 }
 
 main {
@@ -169,6 +169,10 @@ header{
     justify-content: center;
 }
 
+.project-grid + .link-buttons{
+    margin-top: 24px;
+}
+
 .project-card {
     background-color: #282334;
     border: 1px solid var(--border-color);
@@ -198,6 +202,71 @@ header{
     margin: 0;
     font-size: 0.9rem;
     line-height: 1.4;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.project-row{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    background-color: #282334;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding: 12px;
+    --thumb-w: 240px;
+    --thumb-h: 240px;
+}
+
+.project-row.tall
+{
+    --thumb-h: 360px;
+}
+
+.project-row > a{
+    flex: 0 0 var(--thumb-w);
+}
+
+.row-thumb{
+    display: block;
+    width: 100%;
+    max-height: var(--thumb-h);
+    object-fit: contain;
+    border-radius: 4px;
+}
+
+.row-text{
+    flex: 1;
+    text-align: left;
+}
+
+.row-text h3{
+    margin: 0 0 4px;
+}
+
+.row-meta{
+    margin: 0 0 8px;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.row-description{
+    margin: 0 0 12px;
+}
+
+.row-text .tag-list{
+    justify-content: flex-start;
+    border-top: none;
+    padding-top: 0;
+    height: auto;
+}
+
+.row-text .btn-link{
+    margin: 12px 0 0;
 }
 
 .btn-details, .btn-link{
@@ -552,6 +621,23 @@ figcaption{
         width: 100%;
         max-width: 420px;
         justify-self: center;
+    }
+
+    .project-row{
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-row > a{
+        flex: none;
+    }
+
+    .project-row {
+        --thumb-h: 380px;
+    }
+
+    .project-row.tall {
+        --thumb-h: 500px;
     }
 
     .gallery{

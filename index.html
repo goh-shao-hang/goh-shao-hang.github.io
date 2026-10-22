@@ -210,11 +210,14 @@
               <li>Unity</li>
               <li>First-Person Shooter</li>
               <li>Incremental</li>
-              <li>Combat Design</li>
+              <li>Gameplay Design</li>
               <li>Systems Design</li>
             </ul>
             <a class="btn-details" href="projects/devourer.html"> Details </a>
           </div>
+        </div>
+        <div class="link-buttons">
+          <a class="btn-link" href="more-projects.html">More Projects &rarr;</a>
         </div>
       </section>
     </main>
@@ -239,15 +242,6 @@
     </footer>
 
     <script src="scripts/hamburger.js"></script>
-    <script>
-      const reduceMotion = window.matchMedia(
-        "(prefers-reduced-motion: reduce)",
-      );
-      const heroVideo = document.querySelector(".hero-video");
-      if (reduceMotion.matches) {
-        heroVideo.pause();
-        heroVideo.removeAttribute("autoplay");
-      }
-    </script>
+    <script src="scripts/motion.js"></script>
   </body>
 </html>

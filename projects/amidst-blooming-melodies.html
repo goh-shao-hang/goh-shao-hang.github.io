@@ -78,7 +78,7 @@
           playsinline
         ></video>-->
       </section>
-      <section id="overview">
+      <section id="project-overview">
         <h2>Project Overview</h2>
         <p class="project-description">
           Amidst Blooming Melodies is a proof-of-concept action-adventure built
@@ -138,10 +138,9 @@
             <div class="pair-text">
               <h3>Core Mechanic</h3>
               <p>
-                The game features a unique diegetic health mechanic: the Volume,
-                displayed beneath the player character as a circle. The neat
-                part is that this circle also interacts with the game
-                environment (as a purify source)!
+                The game features a diegetic health mechanic: the Volume,
+                displayed beneath the player character as a circle. The circle
+                also interacts with the game environment (as a purify source).
               </p>
             </div>
           </div>
@@ -165,7 +164,7 @@
                 changes when purification completes.
               </p>
               <p>
-                Because enemies share the same volume system, attacking reads as
+                Because enemies share the same Volume system, attacking reads as
                 helping instead of hurting them. Several testers found it a
                 novel and heartwarming experience.
               </p>
@@ -245,14 +244,14 @@
               <h3>Phase Transitions That Feel Like Progress, Not Punishment</h3>
               <p>
                 At the end of each phase, a transition sequence plays where the
-                boss releases an undodgeable shockwave knocks the player down.
-                Pressing Q restores their health as the music and effects shift.
-                This makes the fight unlikely to be lost, since losing an
+                boss releases an undodgeable shockwave that knocks the player
+                down. Pressing Q restores their health as the music and effects
+                shift. This makes the fight unlikely to be lost, since losing an
                 emotionally heavy boss fight hurts immersion.
               </p>
               <p>
-                Adaptive (progressing) soundtrack and visual effects are used to
-                signal the change in Flos's state.
+                An adaptive soundtrack and visual effects are used to signal the
+                change in Flos's state and progression.
               </p>
               <p>
                 Testers initially mistook the shockwave for an unfair attack, so
@@ -270,7 +269,7 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  Each ability is a child game object, simply reorder them to
+                  Each ability is a child game object, so reordering them to
                   change priority.
                 </figcaption>
               </figure>
@@ -461,5 +460,6 @@
       </p>
     </footer>
     <script src="../scripts/hamburger.js"></script>
+    <script src="../scripts/motion.js"></script>
   </body>
 </html>
