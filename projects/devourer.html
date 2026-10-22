@@ -71,7 +71,7 @@
           allowfullscreen
         ></iframe>
       </section>
-      <section id="overview">
+      <section id="project-overview">
         <h2>Project Overview</h2>
         <p class="project-description">
           A boomer-shooter + bullet heaven (inspired by <em>ULTRAKILL</em> and
@@ -90,6 +90,7 @@
             <h3>Roles</h3>
             <ul>
               <li>Gameplay Design</li>
+              <li>Combat Design</li>
               <li>Systems Design</li>
               <li>Programming</li>
               <li>Sound Design</li>
@@ -105,15 +106,15 @@
         <div class="pairs">
           <div class="pair">
             <div class="pair-media">
-              <img src="../images/devourer-thumb.png" />
+              <img src="../images/devourer-thumb.png" alt="" loading="lazy/>
             </div>
             <div class="pair-text">
               <h3>Core Mechanic / Gameplay Loop</h3>
               <p>
                 In each level, a powerful boss arrives after a set timer. Until
                 then, the player has to survive endlessly spawning minions and
-                kills them for stats that grow their weapon. Stat growth are
-                uncapped, so the player have to scale as much as they can before
+                kill them for stats that grow their weapon. Stat growth is
+                uncapped, so the player has to scale as much as they can before
                 the boss arrives. Damage grows from level 1, fire rate is added
                 at level 2, and magazine size at level 3, the final level.
               </p>
@@ -121,26 +122,26 @@
           </div>
           <div class="pair">
             <div class="pair-media">
-              <img src="../images/devourer-thumb.png" />
+              <img src="../images/devourer-thumb.png" alt="" loading="lazy"/>
             </div>
             <div class="pair-text">
               <h3>Positive and Negative Feedback Loops</h3>
               <p>
-                The game rewards good players but help less skilled players by
-                incorporating positive and negative feedback loops.
+                The game rewards good players but helps less skilled players by
+                incorporating both positive and negative feedback loops.
               </p>
               <p>
-                <strong>Positive loop: </strong> the better the player performs,
+                <strong>Positive loop: </strong> The better the player performs,
                 the more stats they earn, which makes them stronger.
               </p>
               <p>
-                <strong>Negative loop: </strong>each kill brings the boss
+                <strong>Negative loop: </strong>Each kill brings the boss
                 slightly earlier, so less skilled players get more time to grow.
               </p>
               <p>
                 The level clear time is what separates them (A good player can
-                clear the game under 4 minutes while a less skilled player takes
-                up to 8 minutes).
+                clear the level under 4 minutes while a less skilled player
+                takes up to 8 minutes).
               </p>
             </div>
           </div>
@@ -211,7 +212,7 @@
             href="https://docs.google.com/document/d/1z4lbVBkZM8dVSLCvw5phfWdcXxx6SPtpSASv6HAslbo/edit?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            >Atomics Sheet / Justification</a
+            >Balance Sheet</a
           >
           <a
             class="btn-link"
@@ -222,8 +223,9 @@
           >
         </div>
         <p class="note">
-          The GDD covers each mechanic and the design and development process
-          behind them.
+          The GDD covers each mechanic and the design process. The balance sheet
+          lists every in-game value, such as base stats, growth rates, and
+          player and enemy health and speed.
         </p>
       </section>
     </main>

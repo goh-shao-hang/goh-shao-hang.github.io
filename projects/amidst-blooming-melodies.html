@@ -269,8 +269,8 @@
                   loading="lazy"
                 />
                 <figcaption>
-                  Each ability is a child game object, so reordering them to
-                  change priority.
+                  Each ability is a child game object, so reordering them
+                  changes priority.
                 </figcaption>
               </figure>
               <figure>
@@ -287,7 +287,7 @@
               <figure>
                 <img
                   src="../images/amidst-blooming-melodies/state-machine-3.png"
-                  alt="Flow diagram of the AI requesting states from ability manager, without having them fixed for the entire AI."
+                  alt="Flow diagram of the AI requesting abilities from ability manager, without having them fixed for the entire AI."
                   loading="lazy"
                 />
                 <figcaption>
@@ -311,7 +311,7 @@
                 entering and exiting its state.
               </p>
               <p>
-                The AI requests states from the Ability Manager at runtime,
+                The AI requests abilities from the Ability Manager at runtime,
                 rather than having them hardcoded and fixed within the AI.
                 Ability Managers can be swapped at runtime. Any states still
                 running are allowed to finish before the switch takes effect
