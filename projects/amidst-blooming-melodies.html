@@ -78,19 +78,20 @@
           playsinline
         ></video>-->
       </section>
-      <section id="project-details">
+      <section id="overview">
         <h2>Project Overview</h2>
         <p class="project-description">
-          An action-adventure game with a unique diegetic health mechanic (the
-          <span style="font-weight: bold; font-style: italic">Volume</span>)
-          displayed beneath the player character as a circle that purifies and
-          interacts with the game environment. You play as Flos against the
-          Giant Voiceless — a bunny-shaped, single-eyed "Corrupted Collective"
-          boss — focusing on a puzzle-box level design and three-phase boss
-          fight Made as my Master's Project where I ran a between-subjects study
-          with 2 builds to investigate how audiovisual and narrative design
-          enhances combat experience while the underlying mechanics remains
-          identical across both conditions.
+          Amidst Blooming Melodies is a proof-of-concept action-adventure built
+          around a diegetic health mechanic, the Volume: a circle beneath the
+          player that purifies and interacts with the environment. It pairs
+          puzzle-box level design with a three-phase boss fight. I developed it
+          as my Master's project, running a between-subjects study with two
+          builds to investigate how audiovisual and narrative design enhance the
+          combat experience while keeping the underlying mechanics identical
+          across both conditions. The results show that audiovisual and
+          narrative design slightly improved perceived quality, and had a
+          stronger effect on emotional impression, engagement and long-term
+          impression.
         </p>
         <div class="tools-and-roles">
           <div class="project-detail-box">
@@ -108,132 +109,335 @@
           <div class="project-detail-box">
             <h3>Roles</h3>
             <ul>
-              <li>Gameplay Design</li>
+              <li>Gameplay / Mechanics Design</li>
+              <li>Combat Design</li>
+              <li>Narrative Design</li>
               <li>Systems Design</li>
-              <li>Level Design</li>
               <li>Programming</li>
               <li>Music Composition</li>
-              <li>Sound Design</li>
               <li>Technical Art</li>
               <li>UI/UX</li>
             </ul>
           </div>
         </div>
-        <div class="about-project">
-          <h2>Design Breakdown</h2>
-          <h3>Core Mechanic</h3>
-          <div class="about-project-box">
-            <img
-              src="../images/amidst-blooming-melodies/volume-1.png"
-              alt="Screenshot"
-              loading="lazy"
-            />
-            <p>
-              The game features a unique diegetic health mechanic: the
-              <span style="font-weight: bold; font-style: italic">Volume</span>,
-              displayed beneath the player character as a circle. The neat part
-              is that this circle also interacts with the game environment (as a
-              <span style="font-weight: bold; font-style: italic"
-                >purify source</span
-              >)!
-            </p>
+      </section>
+      <section id="design-breakdown">
+        <h2>Design Breakdown</h2>
+        <div class="pairs">
+          <div class="pair">
+            <div class="pair-media">
+              <video
+                src="../videos/abm-core-mechanic.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Showcase of player volume mechanic"
+              ></video>
+            </div>
+            <div class="pair-text">
+              <h3>Core Mechanic</h3>
+              <p>
+                The game features a unique diegetic health mechanic: the Volume,
+                displayed beneath the player character as a circle. The neat
+                part is that this circle also interacts with the game
+                environment (as a purify source)!
+              </p>
+            </div>
           </div>
-          <h3>Purify, Not kill</h3>
-          <div class="about-project-box-alternate">
-            <img
-              src="../images/amidst-blooming-melodies/volume-2.png"
-              alt="Screenshot"
-              loading="lazy"
-            />
-            <p>
-              The enemies are corrupted, so the player purifies them instead of
-              killing them. <br />Attacking enemies causes the same circle on
-              them to grow. The circle turns green and the creature visually
-              changes when purification completes.<br />
-              <span style="font-style: italic">
-                Several testers described this as a novel and heartwarming
-                experience</span
-              >.
-            </p>
+          <div class="pair">
+            <div class="pair-media">
+              <video
+                src="../videos/abm-combat.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Purifying a corrupted enemy gives it the same circle the player has"
+              ></video>
+            </div>
+            <div class="pair-text">
+              <h3>Purify, Not Kill</h3>
+              <p>
+                The enemies are corrupted, so the player purifies them instead
+                of killing them. Attacking enemies causes the same circle on
+                them to grow. The circle turns green and the creature visually
+                changes when purification completes.
+              </p>
+              <p>
+                Because enemies share the same volume system, attacking reads as
+                helping instead of hurting them. Several testers found it a
+                novel and heartwarming experience.
+              </p>
+            </div>
           </div>
-          <h3>Volume as a Puzzling Tool</h3>
-          <div class="about-project-box">
-            <img
-              src="../images/amidst-blooming-melodies/volume-1.png"
-              alt="Screenshot"
-              loading="lazy"
-            />
-            <p>
-              The Volume also acts as a puzzle tool. It interacts with the
-              environment and reveals hidden objects, so the purification theme
-              extends beyond combat. Several puzzle ideas are tested within the
-              proof of concept prototype.
-            </p>
+          <div class="pair">
+            <div class="pair-media">
+              <video
+                src="../videos/abm-puzzles.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Puzzle example using volume mechanic"
+              ></video>
+            </div>
+            <div class="pair-text">
+              <h3>Volume as a Puzzling Tool</h3>
+              <p>
+                Creatures other than Flos can have a Volume too. The Volume also
+                acts as a puzzle tool that interacts with the environment and
+                reveals hidden objects, so the purification theme extends beyond
+                combat.
+              </p>
+              <p>
+                The prototype explores puzzles where the player attacks to grant
+                a creature volume, sings, or uses their volume to reveal hidden
+                objects.
+              </p>
+            </div>
           </div>
-          <h3>3-Phase Boss Design</h3>
-          <div class="about-project-box-alternate">
-            <img
-              src="../images/amidst-blooming-melodies/state-machine-3.png"
-              alt="Screenshot"
-              loading="lazy"
-            />
-            <p>
-              Phase 1: introduces the boss's actions at low difficulty: an
-              easy-to-dodge exploding projectile toss, punches and stomps.<br />Phase
-              2: adds mobility and positioning pressure: two consecutive rushes,
-              a jumpable shockwave, and a three-projectile toss. <br />Phase 3:
-              escalates with three consecutive rushes and an ultimate: a charged
-              explosion that hits hard up close and scatters exploding
-              projectiles.
-            </p>
+          <div class="pair">
+            <div class="pair-media">
+              <video
+                src="../videos/abm-boss-1.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Boss fight"
+              ></video>
+            </div>
+            <div class="pair-text">
+              <h3>3-Phase Boss Design</h3>
+              <p>The goal is to teach first, then escalate with each phase.</p>
+              <ul>
+                <li>
+                  <strong>Phase 1:</strong> Introduces the boss's actions at low
+                  difficulty: an easy-to-dodge exploding projectile toss,
+                  punches and stomps.
+                </li>
+                <li>
+                  <strong>Phase 2:</strong> Adds mobility and positioning
+                  pressure with two consecutive rushes, a jumpable shockwave,
+                  and a triple projectile toss.
+                </li>
+                <li>
+                  <strong>Phase 3:</strong> Escalates with three consecutive
+                  rushes and adds an ultimate charged explosion that hits hard
+                  up close and scatters exploding projectiles.
+                </li>
+              </ul>
+            </div>
           </div>
-          <h3>Modular In-Editor Game Object Based State Machine</h3>
-          <div class="about-project-box">
-            <img
-              src="../images/amidst-blooming-melodies/state-machine-2.png"
-              alt="Screenshot"
-              loading="lazy"
-            />
-            <p>
-              The Giant Voiceless’s abilities are authored as child game
-              objects, and the state machine is generated from them at spawn. An
-              ability only defines what it does and its conditions, and the
-              system handles entering and exiting its state. Adding or removing
-              an ability object changes the moveset with no code change, and
-              nothing breaks. Once the system existed, the full moveset took
-              under five days, each ability functional in under 30 minutes.
-            </p>
+          <div class="pair">
+            <div class="pair-media">
+              <video
+                src="../videos/abm-recover.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Recover Mechanic between Boss Phases"
+              ></video>
+            </div>
+            <div class="pair-text">
+              <h3>Phase Transitions That Feel Like Progress, Not Punishment</h3>
+              <p>
+                At the end of each phase, a transition sequence plays where the
+                boss releases an undodgeable shockwave knocks the player down.
+                Pressing Q restores their health as the music and effects shift.
+                This makes the fight unlikely to be lost, since losing an
+                emotionally heavy boss fight hurts immersion.
+              </p>
+              <p>
+                Adaptive (progressing) soundtrack and visual effects are used to
+                signal the change in Flos's state.
+              </p>
+              <p>
+                Testers initially mistook the shockwave for an unfair attack, so
+                I hid the boss health bar during the sequence, which prevented
+                the misread.
+              </p>
+            </div>
           </div>
-          <h2>Narrative Design</h2>
-          <h3>Narrative Background</h3>
-          <div class="about-project-box">
-            <img
-              src="../images/amidst-blooming-melodies-thumb.jpg"
-              alt="Screenshot"
-              loading="lazy"
-            />
-            <p class="project-description">
-              You play as Flos, an interstellar traveller who crash-lands on
-              Floralis, a planet she eventually discovers is her home planet.
-              Floralis is plagued by a phenomenon known as the Voiceless. Use
-              the power of your music to purify corrupted enemies, solve
-              environmental puzzles, and restore the voices of a lost world.
-            </p>
+          <div class="pair">
+            <div class="pair-media">
+              <figure>
+                <img
+                  src="../images/amidst-blooming-melodies/state-machine-1.png"
+                  alt="Unity hierarchy showing boss abilities as child game objects"
+                  loading="lazy"
+                />
+                <figcaption>
+                  Each ability is a child game object, simply reorder them to
+                  change priority.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../images/amidst-blooming-melodies/state-machine-2.png"
+                  alt="Flow diagram of the ability manager generating states for the AI"
+                  loading="lazy"
+                />
+                <figcaption>
+                  The ability manager reads each child ability, then converts it
+                  into an executable state for the AI.
+                </figcaption>
+              </figure>
+              <figure>
+                <img
+                  src="../images/amidst-blooming-melodies/state-machine-3.png"
+                  alt="Flow diagram of the AI requesting states from ability manager, without having them fixed for the entire AI."
+                  loading="lazy"
+                />
+                <figcaption>
+                  Flow diagram of AI requesting abilities from ability managers,
+                  which can be swapped seamlessly during runtime.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="pair-text">
+              <h3>Modular Game Object Based State Machine / Ability System</h3>
+              <p>
+                This ability system has 3 design pillars:
+                <strong>modular</strong>,
+                <strong>game-object based (designer friendly)</strong> and
+                <strong>procedural state generation</strong>.
+              </p>
+              <p>
+                The enemy's abilities are created as child game objects, and the
+                state machine is generated from them at spawn. An ability only
+                defines what it does and its conditions, and the system handles
+                entering and exiting its state.
+              </p>
+              <p>
+                The AI requests states from the Ability Manager at runtime,
+                rather than having them hardcoded and fixed within the AI.
+                Ability Managers can be swapped at runtime. Any states still
+                running are allowed to finish before the switch takes effect
+                seamlessly.
+              </p>
+              <p>
+                Adding or removing an ability object changes the moveset with no
+                code change, and nothing breaks. Once the system existed, the
+                full moveset took under five days, with each ability functional
+                in under 30 minutes.
+              </p>
+            </div>
           </div>
-          <h3>Character Design & Concept Art</h3>
-          <img src="../images/amidst-blooming-melodies/flos.jpeg" />
-          <img src="../images/amidst-blooming-melodies/violet.jpeg" />
-          <img src="../images/amidst-blooming-melodies/voiceless.jpeg" />
-          <p>
-            Art by
+        </div>
+      </section>
+      <section id="narrative">
+        <h2>Narrative</h2>
+        <div class="pairs">
+          <div class="pair">
+            <div class="pair-media">
+              <img
+                src="../images/amidst-blooming-melodies-thumb.jpg"
+                alt="Concept Art of Flos"
+                loading="lazy"
+              />
+            </div>
+            <div class="pair-text">
+              <h3>Floralis and the Voiceless</h3>
+              <p>
+                You play as <em>Flos</em>, an interstellar traveller who
+                crash-lands on the planet Floralis and discovers it is her home
+                planet. Floralis is plagued by a phenomenon known as the
+                Voiceless. Flos uses her songs to purify corrupted enemies,
+                solve puzzles, and bring voices back to her home.
+              </p>
+              <p>
+                The mechanics carry the theme: the Volume is both her health bar
+                and a tool for purifying her surroundings.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery">
+          <figure>
             <a
-              href="https://www.linkedin.com/in/zhong-hao-lai"
+              href="../images/amidst-blooming-melodies/flos.jpeg"
               target="_blank"
               rel="noopener noreferrer"
-              >Zhong Hao Lai</a
             >
-          </p>
+              <img
+                src="../images/amidst-blooming-melodies/flos.jpeg"
+                alt="Concept Art of Flos"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>Flos</figcaption>
+          </figure>
+          <figure>
+            <a
+              href="../images/amidst-blooming-melodies/violet.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../images/amidst-blooming-melodies/violet.jpeg"
+                alt="Concept Art of Violet (Antagonist)"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>Violet (Antagonist)</figcaption>
+          </figure>
+          <figure>
+            <a
+              href="../images/amidst-blooming-melodies/voiceless.jpeg"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src="../images/amidst-blooming-melodies/voiceless.jpeg"
+                alt="Concept Art of Voiceless"
+                loading="lazy"
+              />
+            </a>
+            <figcaption>Voiceless</figcaption>
+          </figure>
         </div>
+        <p class="note">
+          Splash and Concept Art by
+          <a
+            href="https://www.linkedin.com/in/zhong-hao-lai"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Zhong Hao Lai</a
+          >
+        </p>
+      </section>
+      <section id="links">
+        <h2>Links and Documents</h2>
+        <div class="link-buttons">
+          <a
+            class="btn-link"
+            href="https://docs.google.com/document/d/1Shy2vkKr9d3jF2Hfmo0SSuowxgClbBPmYRGwQgP5h1A/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Read the GDD</a
+          >
+          <a
+            class="btn-link"
+            href="https://docs.google.com/document/d/11oxy3XU-OJaSwpaJt6myObjaqIWj7TA3DQFVVrdJYhY/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Read the Thesis</a
+          >
+          <a
+            class="btn-link"
+            href="https://drive.google.com/file/d/1lcBqmJlAWjWrdTrDkMr1G4wiAwv0OUvd/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Play the Prototype</a
+          >
+        </div>
+        <p class="note">
+          The GDD covers each mechanic and the design and development process
+          behind them.
+        </p>
       </section>
     </main>
 

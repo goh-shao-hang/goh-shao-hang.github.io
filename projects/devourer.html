@@ -70,10 +70,9 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
-        <!-- <video src="../videos/devourer-video.mp4" controls playsinline></video> -->
       </section>
-      <section id="project-details">
-        <h2>Project Details</h2>
+      <section id="overview">
+        <h2>Project Overview</h2>
         <p class="project-description">
           A boomer-shooter + bullet heaven (inspired by <em>ULTRAKILL</em> and
           <em>Megabonk</em>) where your weapon grows infinitely. Each level
@@ -100,6 +99,117 @@
             </ul>
           </div>
         </div>
+      </section>
+      <section id="design-breakdown">
+        <h2>Design Breakdown</h2>
+        <div class="pairs">
+          <div class="pair">
+            <div class="pair-media">
+              <img src="../images/devourer-thumb.png" />
+            </div>
+            <div class="pair-text">
+              <h3>Core Mechanic / Gameplay Loop</h3>
+              <p>
+                The boss arrives after five minutes. Until then, the player
+                survives endless minions and kills them for stats that grow
+                their weapon. Damage grows from level 1, fire rate is added at
+                level 2, and magazine size at level 3, the final level. [What
+                “infinite” means here, for example stats have no cap.]
+              </p>
+            </div>
+          </div>
+          <div class="pair">
+            <div class="pair-media">
+              <img src="../images/devourer-thumb.png" />
+            </div>
+            <div class="pair-text">
+              <h3>Positive and Negative Feedback Loops</h3>
+              <p>
+                The game rewards good players but help less skilled players by
+                incorporating positive and negative feedback loops.
+              </p>
+              <p>
+                <strong>Positive loop: </strong> the better the player performs,
+                the more stats they earn, which makes them stronger.
+              </p>
+              <p>
+                <strong>Negative loop: </strong>each kill brings the boss
+                slightly earlier, so less skilled players get more time to grow.
+              </p>
+              <p>
+                The level clear time is what separates them (A good player can
+                clear the game under 4 minutes while a less skilled player takes
+                up to 8 minutes).
+              </p>
+            </div>
+          </div>
+          <div class="pair">
+            <div class="pair-media">
+              <img src="../images/devourer-thumb.png" />
+            </div>
+            <div class="pair-text">
+              <h3>The Death Mark</h3>
+              <p>
+                The death mark is an ultimate ability that charges over time and
+                on kills. Activating it stops the player firing for five seconds
+                but marks every enemy they look at, and when the timer ends, all
+                marked enemies are instantly killed. The player chooses when to
+                commit, usually when enemies have built up the most. Because it
+                charges faster the more the player kills, stronger players can
+                use it more often.
+              </p>
+            </div>
+          </div>
+          <div class="pair">
+            <div class="pair-media">
+              <img src="../images/devourer-thumb.png" />
+            </div>
+            <div class="pair-text">
+              <h3>Designing for Game Feel</h3>
+              <p>
+                I used camera shake, VFX and screen effects to make hits and
+                kills feel strong, taking inspiration from ULTRAKILL. I studied
+                what made kills in ULTRAKILL satisfying and made changes, such
+                as using white particles (instead of blood) for readability as
+                there are many enemies. Firing, scoring a kill and taking damage
+                all trigger a different camera shake with different strengths
+                which quickly tells the player which is happening without being
+                overwhelming. Chromatic Aberration and color shift are used to
+                convey the deadliness of the death mark ability.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="links">
+        <h2>Links and Documents</h2>
+        <div class="link-buttons">
+          <a
+            class="btn-link"
+            href="https://docs.google.com/document/d/1h8luGjerq48iS6x9KsCU53iu_b5_n6XhIrA3pQPC0B4/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Read the GDD</a
+          >
+          <a
+            class="btn-link"
+            href="https://docs.google.com/document/d/1z4lbVBkZM8dVSLCvw5phfWdcXxx6SPtpSASv6HAslbo/edit?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Atomics Sheet / Justification</a
+          >
+          <a
+            class="btn-link"
+            href="https://drive.google.com/file/d/1BMH2RHd6Q6VY1PpERxNx2L9OtF4tbODD/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Play the ptototype</a
+          >
+        </div>
+        <p class="note">
+          The GDD covers each mechanic and the design and development process
+          behind them.
+        </p>
       </section>
     </main>
 

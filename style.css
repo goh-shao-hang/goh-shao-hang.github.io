@@ -200,7 +200,7 @@ header{
     line-height: 1.4;
 }
 
-.btn-details{
+.btn-details, .btn-link{
     display: inline-block;
     background-color: var(--gold);
     color: #14121a;
@@ -212,7 +212,13 @@ header{
     /*transition: transform 0.15s ease, background-color 0.15s ease;*/
 }
 
-.btn-details:hover{
+.link-buttons{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-details:hover, .btn-link:hover{
     background-color: #f2c766;
     text-decoration: none;
     /*transform: translateY(-3px);*/
@@ -311,13 +317,6 @@ iframe{
     border: 0;
 }
 
-#boss-design-overview iframe{
-    width: 100%;
-    max-width: 360px;
-    aspect-ratio: 9 / 16;
-    border: 0;
-}
-
 video{
     max-width: 100%;
     height: auto;
@@ -409,50 +408,124 @@ a:hover {
     text-decoration: underline; /*adds underline on hover*/
 }
 
-.about-project{
-    margin: 24px 0px;
-}
-
-.about-project-box, .about-project-box-alternate{
+.pairs{
     display: flex;
-    flex-direction: row;
-    gap: 36px;
-    justify-content: space-between;
-    padding-bottom: 12px;
-    text-align: left;
-    border-bottom: 1px solid var(--border-color);
-    align-items: center;
+    flex-direction: column;
+    gap: 48px;
 }
 
-.about-project-box-alternate{
+.pair{
+    display: flex;
+    align-items: center;
+    gap: 36px;
+}
+
+.pair:nth-child(even){
     flex-direction: row-reverse;
 }
 
-.about-project-box img, .about-project-box-alternate img{
-    min-width: 0%;
+.pair-media{
     flex: 0 0 45%;
-    aspect-ratio: 3/2;
-    object-fit: cover;
-    border-radius: 5px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.about-project-box p, .about-project-box-alternate p{
-    flex:1;
+.pair-media iframe.vertical{
+    aspect-ratio: 9/16;
+    max-width: 360px;
+    align-self: center;
 }
 
-.about-project h2{
-    margin-top: 36px;
+figure{
+    margin: 0;
+}
+
+figcaption{
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: var(--muted);
+    text-align: left;
+}
+
+.pair-media img, .pair-media video{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.pair-text{
+    flex: 1;
+    text-align: left;
+}
+
+.pair-text h3{ margin: 0 0 8px; }
+
+.pair-text h4{ 
+    margin: 8px 0 2px;
+}
+
+.pair-text ul li{
     margin-bottom: 12px;
 }
 
-.about-project h3 {
-    text-align: left;
+.pair-text p { margin: 0; }
+
+.pair-text p + p{
+    margin-top: 12px;
+}
+
+.pair-text ul{
     margin: 0;
-    margin-top: 6px;
-    margin-inline :6px;
+    padding-left: 20px;
+}
+
+.pair-text li {
     margin-bottom: 6px;
 }
 
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-top: 32px;
+}
+
+.gallery + .note{
+    text-align: left;
+}
+
+.note a{
+    color : var(--muted);
+    text-decoration: underline;
+}
+
+.note a:hover{
+    color: var(--gold);
+}
+
+.gallery a{
+    display: block;
+}
+
+.gallery img{
+    display: block;
+    width: 100%;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+.note{
+    margin-top: 16px;
+    font-size: 0.85rem;
+    color: var(--muted);
+}
+
+.highlight{
+    color: var(--gold)
+}
 
 
 @media (max-width: 800px)
@@ -465,25 +538,24 @@ a:hover {
         flex-direction: column;
     }
 
-    .about-project-box, .about-project-box-alternate{
+    .pair, .pair:nth-child(even) { /*need to specify the even pairs too since the one above has high specificity, preventing following to apply*/
         flex-direction: column;
-        align-items: stretch;
-        gap: 12px;
+        align-items: stretch; /*cancels the 45% since it would mean height in column flex*/
+        gap: 16px;
     }
 
-    .about-project-box img,.about-project-box-alternate img{
+    .pair-media{
         flex: none;
-        width: 100%;
-    }
-
-    .about-project-box p,.about-project-box-alternate p{
-        margin: 0;
     }
 
     .project-card{
         width: 100%;
         max-width: 420px;
         justify-self: center;
+    }
+
+    .gallery{
+        grid-template-columns: 1fr;
     }
 }
 

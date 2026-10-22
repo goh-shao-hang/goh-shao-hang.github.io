@@ -20,7 +20,7 @@
       content="https://goh-shao-hang.github.io/projects/curse-breaker-awakening.html"
     />
     <link rel="icon" type="image/png" href="../favicon.png" />
-    <title>Curse Breaker Awakening</title>
+    <title>Curse Breaker: Awakening</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -74,19 +74,15 @@
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen
         ></iframe>
-        <!-- <video
-          src="../videos/curse-breaker-awakening-trailer.mp4"
-          controls
-          playsinline
-        ></video>-->
       </section>
-      <section id="project-details">
-        <h2>Project Details</h2>
+      <section id="project-overview">
+        <h2>Project Overview</h2>
         <p class="project-description">
-          Best final year project award winning entry at Asia Pacific
-          University. A roguelike dungeon-crawler with procedural dungeon
-          generation, unique environmental interaction mechanics and complex AI
-          behaviours.
+          Winning entry of the
+          <em class="highlight">Best Final Year Project Award</em>
+          at Asia Pacific University. A roguelike dungeon-crawler with
+          procedural dungeon generation, focused on movement and environmental
+          interaction mechanics.
         </p>
         <div class="tools-and-roles">
           <div class="project-detail-box">
@@ -101,33 +97,253 @@
             <h3>Roles</h3>
             <ul>
               <li>Gameplay Design</li>
+              <li>Combat Design</li>
               <li>Systems Design</li>
+              <li>Narrative Design</li>
               <li>Programming</li>
-              <li>Sound Design</li>
               <li>Technical Art</li>
-              <li>3D Art</li>
               <li>UI/UX</li>
             </ul>
           </div>
         </div>
       </section>
-      <section id="boss-design-overview">
-        <h2>Boss Design Overview</h2>
-        <iframe
-          src="https://youtube.com/embed/chSkBDg2Zgc?si=QFFNU96IIAgcQlGG"
-          title="Curse Breaker Awakening Boss Design Overview Video"
-          allow="
-            accelerometer;
-            autoplay;
-            clipboard-write;
-            encrypted-media;
-            gyroscope;
-            picture-in-picture;
-            web-share;
-          "
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen
-        ></iframe>
+      <section id="design-breakdown">
+        <h2>Design Breakdown</h2>
+        <div class="pairs">
+          <div class="pair">
+            <div class="pair-media">
+              <video
+                src="../videos/cba-movement.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Movement and combat mechanics."
+              ></video>
+            </div>
+            <div class="pair-text">
+              <h3>Core Mechanics</h3>
+              <p>
+                Player uses movement mechanics such as wall running and a
+                charged lunge attack to navigate through procedurally generated
+                dungeon rooms, defeat enemies, collect gold and locate the boss.
+                The damage and travel distance of the charged lunge attack
+                damage with charging time, making it one of the most important
+                tool for the player for both combat and mobility.
+              </p>
+            </div>
+          </div>
+          <div class="pair">
+            <div class="pair-media">
+              <figure>
+                <video
+                  src="../videos/cba-pcg1.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  aria-label="Raw dungeon data generation"
+                ></video>
+                <figcaption>
+                  1. The abstract dungeon data generation, represented with a
+                  visualizer module.
+                </figcaption>
+              </figure>
+              <figure>
+                <video
+                  src="../videos/cba-pcg2.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  aria-label="Post-processing on abstract data to apply IDs and special conditions"
+                ></video>
+                <figcaption>
+                  2. The data is processed to apply custom IDs or special
+                  conditions.
+                </figcaption>
+              </figure>
+              <figure>
+                <video
+                  src="../videos/cba-pcg-map.mp4"
+                  autoplay
+                  muted
+                  loop
+                  playsinline
+                  aria-label="Results of intepreting data with modules for gameplay purposes such as generating playable rooms and a map."
+                ></video>
+                <figcaption>
+                  3. Modules use the output data to achieve various gameplay
+                  purposes.
+                </figcaption>
+              </figure>
+            </div>
+            <div class="pair-text">
+              <h3>Procedural Dungeon Generation</h3>
+              <p>
+                The goal is to create a dungeon generation algorithm that is
+                both modular and highly customizable: new rules or modules can
+                be added without touching the generator itself.
+              </p>
+              <ul>
+                <li>
+                  <h4>Step 1: Abstract Data Generation</h4>
+                  <p>
+                    The dungeon layout is generated through an abstract
+                    grid-based data generator based on predetermined parameters
+                    such as room count and grid size.
+                  </p>
+                </li>
+                <li>
+                  <h4>Step 2: Room IDs and Custom Rules</h4>
+                  <p>
+                    The data is then processed, with custom IDs applied to them
+                    or special conditions, enforcing certain rules, such as
+                    marking a start and end room, rooms types that have to be
+                    next to another room type and more.
+                  </p>
+                </li>
+                <li>
+                  <h4>Step 3: Modules</h4>
+                  <p>
+                    Modules are then created to interpret the data for various
+                    gameplay purposes.
+                  </p>
+                  <p>
+                    The final video shows both the playable in-game rooms
+                    generated using the data by the Room Spawner module, and the
+                    map interpreted from the same data by a Map Manager module
+                    which also self-updates to reveal rooms as player discovers
+                    them.
+                  </p>
+                </li>
+              </ul>
+              <p>
+                The whole system strictly abides by the
+                <em class="highlight">SOLID programming principles</em>.
+              </p>
+            </div>
+          </div>
+          <div class="pair">
+            <div class="pair-media">
+              <video
+                src="../videos/cba-environmental-interaction.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Throwing crates, enemy-dropped weapons, and stunned enemies."
+              ></video>
+              <video
+                src="../videos/cba-bugs.mp4"
+                autoplay
+                muted
+                loop
+                playsinline
+                aria-label="Throwing special beetle enemies that trigger explosions."
+              ></video>
+            </div>
+            <div class="pair-text">
+              <h3>Environmental Interaction</h3>
+              <p>
+                The game provides various means for the player to interact with
+                what they see and use them in combat.
+              </p>
+              <p>
+                Players can pick and throw anything with a yellow outline,
+                including crates, weapons dropped by enemies, and even stunned
+                enemies. Enemies can be thrown at each other to deal damage or
+                into environmental hazards.
+              </p>
+              <p>
+                During playtests, players adapted various creative strategies in
+                combat, from throwing enemies into lava for instant-kill to
+                saving up dropped weapons during a boss fight to throw at the
+                boss for high burst-damage.
+              </p>
+            </div>
+          </div>
+          <div class="pair">
+            <div class="pair-media">
+              <iframe
+                class="vertical"
+                src="https://youtube.com/embed/chSkBDg2Zgc?si=QFFNU96IIAgcQlGG"
+                title="Curse Breaker Awakening Boss Design Overview Video"
+                allow="
+                  accelerometer;
+                  autoplay;
+                  clipboard-write;
+                  encrypted-media;
+                  gyroscope;
+                  picture-in-picture;
+                  web-share;
+                "
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="pair-text">
+              <h3>Boss Design Overview</h3>
+              <p>
+                The Feuerhexe boss has two phases, with abilities designed to
+                keep the player moving around the arena instead of sticking
+                close to her. Phase 2 upgrades them (five fireballs instead of
+                three, three summons instead of two) and adds a Blast that
+                destroys arena tiles.
+              </p>
+              <p>
+                When her health is depleted, she becomes undamageable and
+                smashes the floor causing everything to drop into a
+                lava-surrounded arena, enabling <strong>phase 2</strong> and
+                regaining all health after. It is designed as a deliberate
+                surprise for first-time players. Reactions ranged from “wait,
+                there's more?” to “Oh damn, I'm not going to beat this”.
+              </p>
+              <p>
+                The arena shrinks as the boss performs her blast attack, which
+                breaks the tile she stands on. However, friendly fire applies
+                and the lava kills enemies instantly. The fallen pillars can now
+                also be pushed around (to block projectles, enemies, or pushed
+                into lava to create standable ground).
+              </p>
+              <p>
+                The key intent of all these designs are to ensure strategies
+                come not only from abiltiies integrated into the player, but
+                also the environment.
+              </p>
+              <p class="note">
+                The boss is built on an earlier version of the game-object-based
+                ability system from
+                <a href="amidst-blooming-melodies.html#design-breakdown"
+                  >Amidst Blooming Melodies</a
+                >.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="links">
+        <h2>Links and Documents</h2>
+        <div class="link-buttons">
+          <a
+            class="btn-link"
+            href="../documents/curse-breaker-awakening-report.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Read the GDD / Thesis</a
+          >
+          <a
+            class="btn-link"
+            href="https://gamecells.itch.io/curse-breaker-awakening"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Play on itch.io</a
+          >
+        </div>
+        <p class="note">
+          The GDD covers each mechanic and the design and development process
+          behind them.
+        </p>
       </section>
     </main>
 
